@@ -38,5 +38,6 @@ Name | Type | Description | Notes
 | `resizeOption` | ```string``` |   |  |
 | `collaborationSettings` | [```CollaborationSettings```](CollaborationSettings.md) |   |  |
 | `isMasked` | ```boolean``` |   |  [default to false] |
+| `conditionalRules` | [```Array<ConditionalRule>```](ConditionalRule.md) |   |  |
 
 [[Back to Model list]](../README.md#models) [[Back to API list]](../README.md#api-endpoints) [[Back to README]](../README.md)

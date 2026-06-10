@@ -75,6 +75,7 @@ import { EmbeddedTemplateEditRequest } from './embeddedTemplateEditRequest';
 import { EmbeddedTemplateEdited } from './embeddedTemplateEdited';
 import { EmbeddedTemplatePreview } from './embeddedTemplatePreview';
 import { EmbeddedTemplatePreviewJsonRequest } from './embeddedTemplatePreviewJsonRequest';
+import { ErrorResponse } from './errorResponse';
 import { ErrorResult } from './errorResult';
 import { ExistingFormField } from './existingFormField';
 import { ExtendExpiry } from './extendExpiry';
@@ -142,11 +143,14 @@ import { TemplateRecords } from './templateRecords';
 import { TemplateRole } from './templateRole';
 import { TemplateSenderDetail } from './templateSenderDetail';
 import { TemplateSenderDetails } from './templateSenderDetails';
+import { TemplateShareErrorResponse } from './templateShareErrorResponse';
+import { TemplateShareRequest } from './templateShareRequest';
 import { TemplateSharedTemplateDetail } from './templateSharedTemplateDetail';
 import { TemplateSharing } from './templateSharing';
 import { TemplateSignerDetails } from './templateSignerDetails';
 import { TemplateTag } from './templateTag';
 import { TemplateTeamShare } from './templateTeamShare';
+import { TemplateTeamShareRequest } from './templateTeamShareRequest';
 import { TextTagDefinition } from './textTagDefinition';
 import { TextTagOffset } from './textTagOffset';
 import { UpdateGroupContact } from './updateGroupContact';
@@ -314,6 +318,8 @@ export let enumsMap: {[index: string]: any} = {
         "TemplateSignerDetails.SignerTypeEnum": TemplateSignerDetails.SignerTypeEnum,
         "TemplateSignerDetails.SignTypeEnum": TemplateSignerDetails.SignTypeEnum,
         "TemplateTeamShare.AccessTypeEnum": TemplateTeamShare.AccessTypeEnum,
+        "TemplateTeamShareRequest.ActionEnum": TemplateTeamShareRequest.ActionEnum,
+        "TemplateTeamShareRequest.AccessLevelEnum": TemplateTeamShareRequest.AccessLevelEnum,
         "TextTagDefinition.TypeEnum": TextTagDefinition.TypeEnum,
         "TextTagDefinition.TextAlignEnum": TextTagDefinition.TextAlignEnum,
         "TextTagDefinition.TextDirectionEnum": TextTagDefinition.TextDirectionEnum,
@@ -402,6 +408,7 @@ export let typeMap: {[index: string]: any} = {
     "EmbeddedTemplateEdited": EmbeddedTemplateEdited,
     "EmbeddedTemplatePreview": EmbeddedTemplatePreview,
     "EmbeddedTemplatePreviewJsonRequest": EmbeddedTemplatePreviewJsonRequest,
+    "ErrorResponse": ErrorResponse,
     "ErrorResult": ErrorResult,
     "ExistingFormField": ExistingFormField,
     "ExtendExpiry": ExtendExpiry,
@@ -469,11 +476,14 @@ export let typeMap: {[index: string]: any} = {
     "TemplateRole": TemplateRole,
     "TemplateSenderDetail": TemplateSenderDetail,
     "TemplateSenderDetails": TemplateSenderDetails,
+    "TemplateShareErrorResponse": TemplateShareErrorResponse,
+    "TemplateShareRequest": TemplateShareRequest,
     "TemplateSharedTemplateDetail": TemplateSharedTemplateDetail,
     "TemplateSharing": TemplateSharing,
     "TemplateSignerDetails": TemplateSignerDetails,
     "TemplateTag": TemplateTag,
     "TemplateTeamShare": TemplateTeamShare,
+    "TemplateTeamShareRequest": TemplateTeamShareRequest,
     "TextTagDefinition": TextTagDefinition,
     "TextTagOffset": TextTagOffset,
     "UpdateGroupContact": UpdateGroupContact,
@@ -567,6 +577,7 @@ export {
     EmbeddedTemplateEdited,
     EmbeddedTemplatePreview,
     EmbeddedTemplatePreviewJsonRequest,
+    ErrorResponse,
     ErrorResult,
     ExistingFormField,
     ExtendExpiry,
@@ -634,11 +645,14 @@ export {
     TemplateRole,
     TemplateSenderDetail,
     TemplateSenderDetails,
+    TemplateShareErrorResponse,
+    TemplateShareRequest,
     TemplateSharedTemplateDetail,
     TemplateSharing,
     TemplateSignerDetails,
     TemplateTag,
     TemplateTeamShare,
+    TemplateTeamShareRequest,
     TextTagDefinition,
     TextTagOffset,
     UpdateGroupContact,

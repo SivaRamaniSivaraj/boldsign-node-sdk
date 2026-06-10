@@ -15,7 +15,7 @@ import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from 'axios';
 import {
     ObjectSerializer, Authentication, VoidAuth, Interceptor,
     HttpBasicAuth, HttpBearerAuth, ApiKeyAuth, OAuth, RequestFile, 
-    CreateTemplateRequest,DocumentCreated,EditTemplateRequest,EmbeddedCreateTemplateRequest,EmbeddedMergeTemplateFormRequest,EmbeddedSendCreated,EmbeddedSendTemplateFormRequest,EmbeddedTemplateCreated,EmbeddedTemplateEditRequest,EmbeddedTemplateEdited,EmbeddedTemplatePreview,EmbeddedTemplatePreviewJsonRequest,ErrorResult,MergeAndSendForSignForm,SendForSignFromTemplateForm,TemplateCreated,TemplateProperties,TemplateRecords,TemplateTag,
+    CreateTemplateRequest,DocumentCreated,EditTemplateRequest,EmbeddedCreateTemplateRequest,EmbeddedMergeTemplateFormRequest,EmbeddedSendCreated,EmbeddedSendTemplateFormRequest,EmbeddedTemplateCreated,EmbeddedTemplateEditRequest,EmbeddedTemplateEdited,EmbeddedTemplatePreview,EmbeddedTemplatePreviewJsonRequest,ErrorResponse,ErrorResult,MergeAndSendForSignForm,SendForSignFromTemplateForm,TemplateCreated,TemplateProperties,TemplateRecords,TemplateShareErrorResponse,TemplateShareRequest,TemplateTag,
 } from '../model';
 
 import {
@@ -1953,6 +1953,148 @@ export class TemplateApi {
                             reject,
                             error.response,
                             422,
+                            "ErrorResult",
+                        )) {
+                          return;
+                        }
+
+
+                        reject(error);
+                    });
+            });
+        });
+    }
+    /**
+     * 
+     * @summary Share a template with teams and manage permissions.
+     * @param templateId Template Id.
+     * @param templateShareRequest Permissions request.
+     * @param options
+     */
+    public async shareTemplate (templateId: string, templateShareRequest: TemplateShareRequest, options: optionsI = {headers: {}}) : Promise<returnTypeI> {
+        templateShareRequest = deserializeIfNeeded(templateShareRequest, "TemplateShareRequest");
+        const localVarPath = this.basePath + '/v1/template/share';
+        let localVarQueryParameters: any = {};
+        let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
+        const produces = ['application/json'];
+        // give precedence to 'application/json'
+        if (produces.indexOf('application/json') >= 0) {
+            localVarHeaderParams['content-type'] = 'application/json';
+        } else {
+            localVarHeaderParams['content-type'] = produces.join(',');
+        }
+        let localVarFormParams: any = {};
+        let localVarBodyParams: any = undefined;
+
+        // verify required parameter 'templateId' is not null or undefined
+        if (templateId === null || templateId === undefined) {
+            throw new Error('Required parameter templateId was null or undefined when calling shareTemplate.');
+        }
+
+        // verify required parameter 'templateShareRequest' is not null or undefined
+        if (templateShareRequest === null || templateShareRequest === undefined) {
+            throw new Error('Required parameter templateShareRequest was null or undefined when calling shareTemplate.');
+        }
+
+        if (templateId !== undefined) {
+            localVarQueryParameters['templateId'] = ObjectSerializer.serialize(templateId, "string");
+        }
+
+        (<any>Object).assign(localVarHeaderParams, options.headers);
+
+        let localVarUseFormData = false;
+
+        const result = generateFormData(templateShareRequest, TemplateShareRequest);
+        localVarUseFormData = result.localVarUseFormData;
+
+        let data = {};
+        if (localVarUseFormData) {
+          const formData = toFormData(result.data);
+          data = formData;
+          localVarHeaderParams = {
+            ...localVarHeaderParams,
+            ...formData.getHeaders(),
+          };
+        } else {
+          data = ObjectSerializer.serialize(
+            templateShareRequest,
+            "TemplateShareRequest"
+          );
+        }
+
+        let localVarRequestOptions: AxiosRequestConfig = {
+            method: 'PATCH',
+            params: localVarQueryParameters,
+            headers: localVarHeaderParams,
+            url: localVarPath,
+            paramsSerializer: this._useQuerystring ? queryParamsSerializer : undefined,
+            maxContentLength: Infinity,
+            maxBodyLength: Infinity,
+            responseType: "json",
+        };
+
+        if (localVarRequestOptions.method !== 'GET') {
+           localVarRequestOptions.data = data;
+        }
+        let authenticationPromise = Promise.resolve();
+
+        if (this.authentications["X-API-KEY"].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications["X-API-KEY"].applyToRequest(localVarRequestOptions));
+        }
+        if (this.authentications["Bearer"].apiKey) {
+            authenticationPromise = authenticationPromise.then(() => this.authentications["Bearer"].applyToRequest(localVarRequestOptions));
+        }
+        authenticationPromise = authenticationPromise.then(() => this.authentications.default.applyToRequest(localVarRequestOptions));
+
+        let interceptorPromise = authenticationPromise;
+        for (const interceptor of this.interceptors) {
+            interceptorPromise = interceptorPromise.then(() => interceptor(localVarRequestOptions));
+        }
+
+        return interceptorPromise.then(() => {
+            return new Promise<returnTypeI>((resolve, reject) => {
+                axios.request(localVarRequestOptions)
+                    .then((response) => {
+                        handleSuccessfulResponse(
+                          resolve,
+                          reject,
+                          response,
+                          
+                        );
+                    }, (error: AxiosError) => {
+                        if (error.response == null) {
+                            reject(error);
+                            return;
+                        }
+
+                        if (handleErrorCodeResponse(
+                            reject,
+                            error.response,
+                            400,
+                            "TemplateShareErrorResponse",
+                        )) {
+                          return;
+                        }
+                        if (handleErrorCodeResponse(
+                            reject,
+                            error.response,
+                            403,
+                            "TemplateShareErrorResponse",
+                        )) {
+                          return;
+                        }
+                        if (handleErrorCodeResponse(
+                            reject,
+                            error.response,
+                            500,
+                            "ErrorResponse",
+                        )) {
+                          return;
+                        }
+                        if (handleErrorCodeResponse(
+                            reject,
+                            error.response,
+                            401,
                             "ErrorResult",
                         )) {
                           return;
