@@ -142,6 +142,7 @@ All URIs are relative to *https://api.boldsign.com*
 | *TemplateApi* | [**mergeAndSend**](./docs/TemplateApi.md#mergeandsend) | **POST** /v1/template/mergeAndSend | Send the document by merging multiple templates. |
 | *TemplateApi* | [**mergeCreateEmbeddedRequestUrlTemplate**](./docs/TemplateApi.md#mergecreateembeddedrequesturltemplate) | **POST** /v1/template/mergeCreateEmbeddedRequestUrl | Generates a merge request URL using a template that combines document merging and sending processes into your application. |
 | *TemplateApi* | [**sendUsingTemplate**](./docs/TemplateApi.md#sendusingtemplate) | **POST** /v1/template/send | Send a document for signature using a Template. |
+| *TemplateApi* | [**shareTemplate**](./docs/TemplateApi.md#sharetemplate) | **PATCH** /v1/template/share | Share a template with teams and manage permissions. |
 | *UserApi* | [**cancelInvitation**](./docs/UserApi.md#cancelinvitation) | **POST** /v1/users/cancelInvitation | Cancel the users invitation. |
 | *UserApi* | [**changeTeam**](./docs/UserApi.md#changeteam) | **PUT** /v1/users/changeTeam | Change users to other team. |
 | *UserApi* | [**createUser**](./docs/UserApi.md#createuser) | **POST** /v1/users/create | Create the user. |
@@ -230,6 +231,7 @@ All URIs are relative to *https://api.boldsign.com*
 - [EmbeddedTemplateEdited](./docs/EmbeddedTemplateEdited.md)
 - [EmbeddedTemplatePreview](./docs/EmbeddedTemplatePreview.md)
 - [EmbeddedTemplatePreviewJsonRequest](./docs/EmbeddedTemplatePreviewJsonRequest.md)
+- [ErrorResponse](./docs/ErrorResponse.md)
 - [ErrorResult](./docs/ErrorResult.md)
 - [ExistingFormField](./docs/ExistingFormField.md)
 - [ExtendExpiry](./docs/ExtendExpiry.md)
@@ -297,11 +299,14 @@ All URIs are relative to *https://api.boldsign.com*
 - [TemplateRole](./docs/TemplateRole.md)
 - [TemplateSenderDetail](./docs/TemplateSenderDetail.md)
 - [TemplateSenderDetails](./docs/TemplateSenderDetails.md)
+- [TemplateShareErrorResponse](./docs/TemplateShareErrorResponse.md)
+- [TemplateShareRequest](./docs/TemplateShareRequest.md)
 - [TemplateSharedTemplateDetail](./docs/TemplateSharedTemplateDetail.md)
 - [TemplateSharing](./docs/TemplateSharing.md)
 - [TemplateSignerDetails](./docs/TemplateSignerDetails.md)
 - [TemplateTag](./docs/TemplateTag.md)
 - [TemplateTeamShare](./docs/TemplateTeamShare.md)
+- [TemplateTeamShareRequest](./docs/TemplateTeamShareRequest.md)
 - [TextTagDefinition](./docs/TextTagDefinition.md)
 - [TextTagOffset](./docs/TextTagOffset.md)
 - [UpdateGroupContact](./docs/UpdateGroupContact.md)

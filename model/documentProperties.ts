@@ -69,6 +69,9 @@ export class DocumentProperties {
     'groupSignerSettings'?: GroupSignerSettings;
     'inEditingMode'?: boolean;
     'displayStatus'?: string | null;
+    'enableAllowSignEverywhere'?: boolean;
+    'isCombinedAudit'?: boolean;
+    'isCombinedAttachment'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -292,6 +295,21 @@ export class DocumentProperties {
             "name": "displayStatus",
             "baseName": "displayStatus",
             "type": "string"
+        },
+        {
+            "name": "enableAllowSignEverywhere",
+            "baseName": "enableAllowSignEverywhere",
+            "type": "boolean"
+        },
+        {
+            "name": "isCombinedAudit",
+            "baseName": "isCombinedAudit",
+            "type": "boolean"
+        },
+        {
+            "name": "isCombinedAttachment",
+            "baseName": "isCombinedAttachment",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {

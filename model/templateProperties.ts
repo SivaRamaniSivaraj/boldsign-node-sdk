@@ -56,6 +56,7 @@ export class TemplateProperties {
     'allowedSignatureTypes'?: Array<TemplateProperties.AllowedSignatureTypesEnum>;
     'groupSignerSettings'?: GroupSignerSettings;
     'sharing'?: TemplateSharing;
+    'enableAllowSignEverywhere'?: boolean;
 
     static discriminator: string | undefined = undefined;
 
@@ -214,6 +215,11 @@ export class TemplateProperties {
             "name": "sharing",
             "baseName": "sharing",
             "type": "TemplateSharing"
+        },
+        {
+            "name": "enableAllowSignEverywhere",
+            "baseName": "enableAllowSignEverywhere",
+            "type": "boolean"
         }    ];
 
     static getAttributeTypeMap() {

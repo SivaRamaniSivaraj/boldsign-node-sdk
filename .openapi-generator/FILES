@@ -93,6 +93,7 @@ model/embeddedTemplateEditRequest.ts
 model/embeddedTemplateEdited.ts
 model/embeddedTemplatePreview.ts
 model/embeddedTemplatePreviewJsonRequest.ts
+model/errorResponse.ts
 model/errorResult.ts
 model/existingFormField.ts
 model/extendExpiry.ts
@@ -162,11 +163,14 @@ model/templateRecords.ts
 model/templateRole.ts
 model/templateSenderDetail.ts
 model/templateSenderDetails.ts
+model/templateShareErrorResponse.ts
+model/templateShareRequest.ts
 model/templateSharedTemplateDetail.ts
 model/templateSharing.ts
 model/templateSignerDetails.ts
 model/templateTag.ts
 model/templateTeamShare.ts
+model/templateTeamShareRequest.ts
 model/textTagDefinition.ts
 model/textTagOffset.ts
 model/updateGroupContact.ts

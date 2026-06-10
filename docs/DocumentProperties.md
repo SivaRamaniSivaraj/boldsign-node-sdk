@@ -50,5 +50,8 @@ Name | Type | Description | Notes
 | `groupSignerSettings` | [```GroupSignerSettings```](GroupSignerSettings.md) |   |  |
 | `inEditingMode` | ```boolean``` |   |  |
 | `displayStatus` | ```string``` |   |  |
+| `enableAllowSignEverywhere` | ```boolean``` |   |  |
+| `isCombinedAudit` | ```boolean``` |   |  |
+| `isCombinedAttachment` | ```boolean``` |   |  |
 
 [[Back to Model list]](../README.md#models) [[Back to API list]](../README.md#api-endpoints) [[Back to README]](../README.md)

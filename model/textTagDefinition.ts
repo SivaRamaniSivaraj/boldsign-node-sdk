@@ -13,6 +13,7 @@
 import { RequestFile } from './models';
 import { AttachmentInfo } from './attachmentInfo';
 import { CollaborationSettings } from './collaborationSettings';
+import { ConditionalRule } from './conditionalRule';
 import { Font } from './font';
 import { FormulaFieldSettings } from './formulaFieldSettings';
 import { ImageInfo } from './imageInfo';
@@ -53,6 +54,7 @@ export class TextTagDefinition {
     'resizeOption'?: TextTagDefinition.ResizeOptionEnum;
     'collaborationSettings'?: CollaborationSettings;
     'isMasked'?: boolean | null = false;
+    'conditionalRules'?: Array<ConditionalRule> | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -216,6 +218,11 @@ export class TextTagDefinition {
             "name": "isMasked",
             "baseName": "isMasked",
             "type": "boolean"
+        },
+        {
+            "name": "conditionalRules",
+            "baseName": "conditionalRules",
+            "type": "Array<ConditionalRule>"
         }    ];
 
     static getAttributeTypeMap() {
