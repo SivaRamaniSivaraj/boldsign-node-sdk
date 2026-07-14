@@ -70,6 +70,7 @@ export class EmbeddedMergeTemplateFormRequest {
     'allowedSignatureTypes'?: Array<EmbeddedMergeTemplateFormRequest.AllowedSignatureTypesEnum>;
     'groupSignerSettings'?: GroupSignerSettings;
     'enableAllowSignEverywhere'?: boolean | null;
+    'documentTimeZone'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -318,6 +319,11 @@ export class EmbeddedMergeTemplateFormRequest {
             "name": "enableAllowSignEverywhere",
             "baseName": "enableAllowSignEverywhere",
             "type": "boolean"
+        },
+        {
+            "name": "documentTimeZone",
+            "baseName": "documentTimeZone",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

@@ -247,7 +247,8 @@ export namespace Roles {
         EmailOtp = <any> 'EmailOTP',
         AccessCode = <any> 'AccessCode',
         Smsotp = <any> 'SMSOTP',
-        IdVerification = <any> 'IdVerification'
+        IdVerification = <any> 'IdVerification',
+        Kba = <any> 'KBA'
     }
     export enum DeliveryModeEnum {
         Email = <any> 'Email',

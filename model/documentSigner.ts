@@ -14,6 +14,7 @@ import { RequestFile } from './models';
 import { AuthenticationSettings } from './authenticationSettings';
 import { FormField } from './formField';
 import { IdentityVerificationSettings } from './identityVerificationSettings';
+import { KbaSettings } from './kbaSettings';
 import { PhoneNumber } from './phoneNumber';
 import { RecipientNotificationSettings } from './recipientNotificationSettings';
 
@@ -27,6 +28,7 @@ export class DocumentSigner {
     'deliveryMode'?: DocumentSigner.DeliveryModeEnum;
     'authenticationCode'?: string | null;
     'identityVerificationSettings'?: IdentityVerificationSettings;
+    'kbaSettings'?: KbaSettings;
     'signerOrder'?: number;
     'enableEmailOTP'?: boolean;
     'signerType'?: DocumentSigner.SignerTypeEnum;
@@ -93,6 +95,11 @@ export class DocumentSigner {
             "name": "identityVerificationSettings",
             "baseName": "identityVerificationSettings",
             "type": "IdentityVerificationSettings"
+        },
+        {
+            "name": "kbaSettings",
+            "baseName": "kbaSettings",
+            "type": "KbaSettings"
         },
         {
             "name": "signerOrder",
@@ -181,7 +188,8 @@ export namespace DocumentSigner {
         EmailOtp = <any> 'EmailOTP',
         AccessCode = <any> 'AccessCode',
         Smsotp = <any> 'SMSOTP',
-        IdVerification = <any> 'IdVerification'
+        IdVerification = <any> 'IdVerification',
+        Kba = <any> 'KBA'
     }
     export enum DeliveryModeEnum {
         Email = <any> 'Email',

@@ -56,7 +56,7 @@ Deletes a Group Contact.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **string**| The group contact id. | |
+| **groupId** | **string**|  | |
 
 ### Return type
 
@@ -88,7 +88,7 @@ Get Summary of the Group Contact.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **string**| Group Contact Id. | |
+| **groupId** | **string**|  | |
 
 ### Return type
 
@@ -156,7 +156,7 @@ Update the Group Contact.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **string**| The group contact ID. | |
+| **groupId** | **string**|  | |
 | **updateGroupContact** | [**UpdateGroupContact**](../docs/UpdateGroupContact.md)| The group contact details. | |
 
 ### Return type

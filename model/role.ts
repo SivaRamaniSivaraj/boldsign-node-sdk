@@ -15,6 +15,7 @@ import { AuthenticationSettings } from './authenticationSettings';
 import { ExistingFormField } from './existingFormField';
 import { FormField } from './formField';
 import { IdentityVerificationSettings } from './identityVerificationSettings';
+import { KbaSettings } from './kbaSettings';
 import { PhoneNumber } from './phoneNumber';
 import { RecipientNotificationSettings } from './recipientNotificationSettings';
 
@@ -36,6 +37,7 @@ export class Role {
     'formFields'?: Array<FormField> | null;
     'existingFormFields'?: Array<ExistingFormField> | null;
     'identityVerificationSettings'?: IdentityVerificationSettings;
+    'kbaSettings'?: KbaSettings;
     /**
     * <p>Description:</p><ul><li><i>0</i> - None</li><li><i>1</i> - English</li><li><i>2</i> - Spanish</li><li><i>3</i> - German</li><li><i>4</i> - French</li><li><i>5</i> - Romanian</li><li><i>6</i> - Norwegian</li><li><i>7</i> - Bulgarian</li><li><i>8</i> - Italian</li><li><i>9</i> - Danish</li><li><i>10</i> - Polish</li><li><i>11</i> - Portuguese</li><li><i>12</i> - Czech</li><li><i>13</i> - Dutch</li><li><i>14</i> - Swedish</li><li><i>15</i> - Russian</li><li><i>16</i> - Japanese</li><li><i>17</i> - Thai</li><li><i>18</i> - SimplifiedChinese</li><li><i>19</i> - TraditionalChinese</li><li><i>20</i> - Korean</li></ul>
     */
@@ -137,6 +139,11 @@ export class Role {
             "type": "IdentityVerificationSettings"
         },
         {
+            "name": "kbaSettings",
+            "baseName": "kbaSettings",
+            "type": "KbaSettings"
+        },
+        {
             "name": "language",
             "baseName": "language",
             "type": "Role.LanguageEnum"
@@ -188,7 +195,8 @@ export namespace Role {
         EmailOtp = <any> 'EmailOTP',
         AccessCode = <any> 'AccessCode',
         Smsotp = <any> 'SMSOTP',
-        IdVerification = <any> 'IdVerification'
+        IdVerification = <any> 'IdVerification',
+        Kba = <any> 'KBA'
     }
     export enum DeliveryModeEnum {
         Email = <any> 'Email',

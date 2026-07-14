@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 | `value` | ```string``` |   |  |
 | `fontSize` | ```number``` |   |  [default to 13] |
 | `font` | ```string``` |   |  |
+| `groupOptions` | [```Array<GroupOption>```](GroupOption.md) |   |  |
+| `checkboxValidationSettings` | [```CheckboxValidationSettings```](CheckboxValidationSettings.md) |   |  |
 | `fontHexColor` | ```string``` |   |  |
 | `isBoldFont` | ```boolean``` |   |  |
 | `isItalicFont` | ```boolean``` |   |  |

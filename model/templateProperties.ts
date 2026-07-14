@@ -57,6 +57,7 @@ export class TemplateProperties {
     'groupSignerSettings'?: GroupSignerSettings;
     'sharing'?: TemplateSharing;
     'enableAllowSignEverywhere'?: boolean;
+    'documentTimeZone'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -220,6 +221,11 @@ export class TemplateProperties {
             "name": "enableAllowSignEverywhere",
             "baseName": "enableAllowSignEverywhere",
             "type": "boolean"
+        },
+        {
+            "name": "documentTimeZone",
+            "baseName": "documentTimeZone",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

@@ -222,14 +222,14 @@ export class BrandingApi {
      * @param showBuiltInFormFields 
      * @param allowCustomFieldCreation 
      * @param showSharedCustomFields 
-     * @param hideDecline 
-     * @param hideSave 
-     * @param documentExpirySettingsExpiryDateType 
-     * @param documentExpirySettingsExpiryValue 
-     * @param documentExpirySettingsEnableDefaultExpiryAlert 
-     * @param documentExpirySettingsEnableAutoReminder 
-     * @param documentExpirySettingsReminderDays 
-     * @param documentExpirySettingsReminderCount 
+     * @param hideDecline This option prevents signers to decline the document during the signing process.
+     * @param hideSave This option prevents signers to save their changes during the signing process and continue signing later.
+     * @param documentExpirySettingsExpiryDateType This property represents the type for the expiry date
+     * @param documentExpirySettingsExpiryValue This property is used to set the expiry value based on the expiry type
+     * @param documentExpirySettingsEnableDefaultExpiryAlert This property will send the expiry alert email before the day of expiry for the pending signers.
+     * @param documentExpirySettingsEnableAutoReminder When auto reminder is enabled, you can select how often to remind in terms of days and select the maximum number of reminders.
+     * @param documentExpirySettingsReminderDays Remind in terms of days.
+     * @param documentExpirySettingsReminderCount Number of reminder count.
      * @param customDomainSettingsDomainName 
      * @param customDomainSettingsFromName 
      * @param signatureFrameSettingsEnableSignatureFrame 
@@ -496,7 +496,7 @@ export class BrandingApi {
     /**
      * 
      * @summary Delete the brand.
-     * @param brandId brand Id.
+     * @param brandId 
      * @param options
      */
     public async deleteBrand (brandId: string, options: optionsI = {headers: {}}) : Promise<BrandingMessage> {
@@ -615,7 +615,7 @@ export class BrandingApi {
     /**
      * 
      * @summary Edit the brand.
-     * @param brandId The brand id.
+     * @param brandId 
      * @param brandName 
      * @param brandLogo 
      * @param backgroundColor 
@@ -635,14 +635,14 @@ export class BrandingApi {
      * @param showBuiltInFormFields 
      * @param allowCustomFieldCreation 
      * @param showSharedCustomFields 
-     * @param hideDecline 
-     * @param hideSave 
-     * @param documentExpirySettingsExpiryDateType 
-     * @param documentExpirySettingsExpiryValue 
-     * @param documentExpirySettingsEnableDefaultExpiryAlert 
-     * @param documentExpirySettingsEnableAutoReminder 
-     * @param documentExpirySettingsReminderDays 
-     * @param documentExpirySettingsReminderCount 
+     * @param hideDecline This option prevents signers to decline the document during the signing process.
+     * @param hideSave This option prevents signers to save their changes during the signing process and continue signing later.
+     * @param documentExpirySettingsExpiryDateType This property represents the type for the expiry date
+     * @param documentExpirySettingsExpiryValue This property is used to set the expiry value based on the expiry type
+     * @param documentExpirySettingsEnableDefaultExpiryAlert This property will send the expiry alert email before the day of expiry for the pending signers.
+     * @param documentExpirySettingsEnableAutoReminder When auto reminder is enabled, you can select how often to remind in terms of days and select the maximum number of reminders.
+     * @param documentExpirySettingsReminderDays Remind in terms of days.
+     * @param documentExpirySettingsReminderCount Number of reminder count.
      * @param customDomainSettingsDomainName 
      * @param customDomainSettingsFromName 
      * @param signatureFrameSettingsEnableSignatureFrame 
@@ -908,7 +908,7 @@ export class BrandingApi {
     /**
      * 
      * @summary Get the specific brand details.
-     * @param brandId The brand id.
+     * @param brandId 
      * @param options
      */
     public async getBrand (brandId: string, options: optionsI = {headers: {}}) : Promise<ViewBrandDetails> {
@@ -1035,7 +1035,7 @@ export class BrandingApi {
     /**
      * 
      * @summary Reset default brand.
-     * @param brandId brand Id.
+     * @param brandId 
      * @param options
      */
     public async resetDefaultBrand (brandId: string, options: optionsI = {headers: {}}) : Promise<BrandingMessage> {

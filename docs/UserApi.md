@@ -59,7 +59,7 @@ Change users to other team.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **userId** | **string**| user Id. | |
+| **userId** | **string**|  | |
 | **changeTeamRequest** | [**ChangeTeamRequest**](../docs/ChangeTeamRequest.md)| Change team request. | [optional] |
 
 ### Return type
@@ -124,7 +124,7 @@ Get summary of the user.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **userId** | **string**| User Id. | |
+| **userId** | **string**|  | |
 
 ### Return type
 

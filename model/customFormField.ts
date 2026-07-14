@@ -12,7 +12,9 @@
 
 import { RequestFile } from './models';
 import { AttachmentInfo } from './attachmentInfo';
+import { CheckboxValidationSettings } from './checkboxValidationSettings';
 import { EditableDateFieldSettings } from './editableDateFieldSettings';
+import { GroupOption } from './groupOption';
 import { ImageInfo } from './imageInfo';
 
 export class CustomFormField {
@@ -24,6 +26,8 @@ export class CustomFormField {
     'value'?: string | null;
     'fontSize'?: number = 13;
     'font'?: CustomFormField.FontEnum;
+    'groupOptions'?: Array<GroupOption> | null;
+    'checkboxValidationSettings'?: CheckboxValidationSettings;
     'fontHexColor'?: string | null;
     'isBoldFont'?: boolean;
     'isItalicFont'?: boolean;
@@ -93,6 +97,16 @@ export class CustomFormField {
             "name": "font",
             "baseName": "font",
             "type": "CustomFormField.FontEnum"
+        },
+        {
+            "name": "groupOptions",
+            "baseName": "groupOptions",
+            "type": "Array<GroupOption>"
+        },
+        {
+            "name": "checkboxValidationSettings",
+            "baseName": "checkboxValidationSettings",
+            "type": "CheckboxValidationSettings"
         },
         {
             "name": "fontHexColor",
