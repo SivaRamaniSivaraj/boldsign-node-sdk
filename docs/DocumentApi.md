@@ -10,6 +10,7 @@ All URIs are relative to https://api.boldsign.com.
 | [**cancelEditing()**](DocumentApi.md#cancelEditing) | **POST** /v1/document/cancelEditing | Cancels editing for a document that is currently in edit-mode. |
 | [**changeAccessCode()**](DocumentApi.md#changeAccessCode) | **PATCH** /v1/document/changeAccessCode | Changes the access code for the given document signer. |
 | [**changeRecipient()**](DocumentApi.md#changeRecipient) | **PATCH** /v1/document/changeRecipient | Change recipient details of a document. |
+| [**createEmbeddedDocumentCloneUrl()**](DocumentApi.md#createEmbeddedDocumentCloneUrl) | **POST** /v1/document/createEmbeddedCloneUrl | Generates a URL to embeds Clone document process into your application. |
 | [**createEmbeddedEditUrl()**](DocumentApi.md#createEmbeddedEditUrl) | **POST** /v1/document/createEmbeddedEditUrl | Generates an embedded edit URL that allows the document editing process to be integrated into your application. |
 | [**createEmbeddedRequestUrlDocument()**](DocumentApi.md#createEmbeddedRequestUrlDocument) | **POST** /v1/document/createEmbeddedRequestUrl | Generates a send URL which embeds document sending process into your application. |
 | [**deleteDocument()**](DocumentApi.md#deleteDocument) | **DELETE** /v1/document/delete | Delete the document. |
@@ -44,7 +45,7 @@ The add authentication to recipient.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| The DocumentId. | |
+| **documentId** | **string**|  | |
 | **accessCodeDetail** | [**AccessCodeDetail**](../docs/AccessCodeDetail.md)| Access code details. | [optional] |
 
 ### Return type
@@ -152,8 +153,8 @@ Cancels editing for a document that is currently in edit-mode.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| The document id. | |
-| **onBehalfOf** | **string**| The onbehalfof email id. | [optional] |
+| **documentId** | **string**|  | |
+| **onBehalfOf** | **string**|  | [optional] |
 
 ### Return type
 
@@ -220,7 +221,7 @@ Change recipient details of a document.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| The documentID details. | |
+| **documentId** | **string**|  | |
 | **changeRecipient** | [**ChangeRecipient**](../docs/ChangeRecipient.md)| The new recipient details. | |
 
 ### Return type
@@ -240,6 +241,39 @@ void (empty response body)
 [[Back to Model list]](../README.md#models)
 [[Back to README]](../README.md)
 
+## `createEmbeddedDocumentCloneUrl()`
+
+```typescript
+createEmbeddedDocumentCloneUrl(documentId: string, embeddedCloneDocumentJsonRequest: EmbeddedCloneDocumentJsonRequest): EmbeddedClonedDocument
+```
+
+Generates a URL to embeds Clone document process into your application.
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **documentId** | **string**|  | |
+| **embeddedCloneDocumentJsonRequest** | [**EmbeddedCloneDocumentJsonRequest**](../docs/EmbeddedCloneDocumentJsonRequest.md)| The embedded clone document request body. | [optional] |
+
+### Return type
+
+[**EmbeddedClonedDocument**](../docs/EmbeddedClonedDocument.md)
+
+### Authorization
+
+[X-API-KEY](../README.md#X-API-KEY), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`, `multipart/form-data`, `application/x-www-form-urlencoded`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints)
+[[Back to Model list]](../README.md#models)
+[[Back to README]](../README.md)
+
 ## `createEmbeddedEditUrl()`
 
 ```typescript
@@ -253,7 +287,7 @@ Generates an embedded edit URL that allows the document editing process to be in
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| The document id. | |
+| **documentId** | **string**|  | |
 | **embeddedDocumentEditJsonRequest** | [**EmbeddedDocumentEditJsonRequest**](../docs/EmbeddedDocumentEditJsonRequest.md)| The embedded edit document request body. | [optional] |
 
 ### Return type
@@ -318,8 +352,8 @@ Delete the document.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| Document Id. | |
-| **deletePermanently** | **boolean**| Delete Permanently. | [optional] [default to false] |
+| **documentId** | **string**|  | |
+| **deletePermanently** | **boolean**|  | [optional] [default to false] |
 
 ### Return type
 
@@ -383,9 +417,9 @@ Download the Attachment.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| Document Id. | |
-| **attachmentId** | **string**| Attachment Id(Get attachment ID from Properties API). | |
-| **onBehalfOf** | **string**| The on behalfof email address. | [optional] |
+| **documentId** | **string**|  | |
+| **attachmentId** | **string**|  | |
+| **onBehalfOf** | **string**|  | [optional] |
 
 ### Return type
 
@@ -417,8 +451,8 @@ Download the audit trail document.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| Document Id. | |
-| **onBehalfOf** | **string**| The on behalfof email address. | [optional] |
+| **documentId** | **string**|  | |
+| **onBehalfOf** | **string**|  | [optional] |
 
 ### Return type
 
@@ -450,8 +484,8 @@ Download the document.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| Document Id. | |
-| **onBehalfOf** | **string**| The on behalfof email address. | [optional] |
+| **documentId** | **string**|  | |
+| **onBehalfOf** | **string**|  | [optional] |
 
 ### Return type
 
@@ -483,7 +517,7 @@ Sends a draft-status document out for signature.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| The ID of the document to be sent. | |
+| **documentId** | **string**|  | |
 
 ### Return type
 
@@ -515,7 +549,7 @@ Edit and updates an existing document.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| Document Id. | |
+| **documentId** | **string**|  | |
 | **editDocumentRequest** | [**EditDocumentRequest**](../docs/EditDocumentRequest.md)| Edit document JSON request. | [optional] |
 
 ### Return type
@@ -548,7 +582,7 @@ Extends the expiration date of the document.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| Document Id. | |
+| **documentId** | **string**|  | |
 | **extendExpiry** | [**ExtendExpiry**](../docs/ExtendExpiry.md)| The new expiry value should be specified in yyyy-MM-dd format for days type, ISO date time format for specific date time and integer for hours type. | [optional] |
 
 ### Return type
@@ -581,7 +615,7 @@ Get summary of the document.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| Document Id. | |
+| **documentId** | **string**|  | |
 
 ### Return type
 
@@ -694,7 +728,7 @@ Updates the value (prefill) of the fields in the document.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| The DocumentId. | |
+| **documentId** | **string**|  | |
 | **prefillFieldRequest** | [**PrefillFieldRequest**](../docs/PrefillFieldRequest.md)| The prefill field request. | |
 
 ### Return type
@@ -727,8 +761,8 @@ Send reminder to pending signers.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| Document Id. | |
-| **receiverEmails** | [**Array<string>**](../docs/string.md)| Signer emails. | [optional] |
+| **documentId** | **string**|  | |
+| **receiverEmails** | [**Array<string>**](../docs/string.md)|  | [optional] |
 | **reminderMessage** | [**ReminderMessage**](../docs/ReminderMessage.md)| Reminder Message for signers. | [optional] |
 
 ### Return type
@@ -794,7 +828,7 @@ Revoke the document.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **documentId** | **string**| Document Id. | |
+| **documentId** | **string**|  | |
 | **revokeDocument** | [**RevokeDocument**](../docs/RevokeDocument.md)| RevokeDetails. | |
 
 ### Return type

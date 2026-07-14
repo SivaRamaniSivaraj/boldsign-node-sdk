@@ -7,6 +7,7 @@ All URIs are relative to https://api.boldsign.com.
 | [**addTag()**](TemplateApi.md#addTag) | **PATCH** /v1/template/addTags | Add the Tags in Templates. |
 | [**createEmbeddedPreviewUrl()**](TemplateApi.md#createEmbeddedPreviewUrl) | **POST** /v1/template/createEmbeddedPreviewUrl | Generates a preview URL for a template to view it. |
 | [**createEmbeddedRequestUrlTemplate()**](TemplateApi.md#createEmbeddedRequestUrlTemplate) | **POST** /v1/template/createEmbeddedRequestUrl | Generates a send URL using a template which embeds document sending process into your application. |
+| [**createEmbeddedTemplateCloneUrl()**](TemplateApi.md#createEmbeddedTemplateCloneUrl) | **POST** /v1/template/createEmbeddedCloneUrl | Generates a URL to embeds Clone template process into your application. |
 | [**createEmbeddedTemplateUrl()**](TemplateApi.md#createEmbeddedTemplateUrl) | **POST** /v1/template/createEmbeddedTemplateUrl | Generates a create URL to embeds template create process into your application. |
 | [**createTemplate()**](TemplateApi.md#createTemplate) | **POST** /v1/template/create | Creates a new template. |
 | [**deleteTemplate()**](TemplateApi.md#deleteTemplate) | **DELETE** /v1/template/delete | Deletes a template. |
@@ -67,7 +68,7 @@ Generates a preview URL for a template to view it.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **templateId** | **string**| The template id. | |
+| **templateId** | **string**|  | |
 | **embeddedTemplatePreviewJsonRequest** | [**EmbeddedTemplatePreviewJsonRequest**](../docs/EmbeddedTemplatePreviewJsonRequest.md)| The embedded template preview request body. | [optional] |
 
 ### Return type
@@ -100,12 +101,45 @@ Generates a send URL using a template which embeds document sending process into
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **templateId** | **string**| The template id. | |
+| **templateId** | **string**|  | |
 | **embeddedSendTemplateFormRequest** | [**EmbeddedSendTemplateFormRequest**](../docs/EmbeddedSendTemplateFormRequest.md)| Embedded send template json request. | [optional] |
 
 ### Return type
 
 [**EmbeddedSendCreated**](../docs/EmbeddedSendCreated.md)
+
+### Authorization
+
+[X-API-KEY](../README.md#X-API-KEY), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`, `multipart/form-data`, `application/x-www-form-urlencoded`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../README.md#api-endpoints)
+[[Back to Model list]](../README.md#models)
+[[Back to README]](../README.md)
+
+## `createEmbeddedTemplateCloneUrl()`
+
+```typescript
+createEmbeddedTemplateCloneUrl(templateId: string, embeddedCloneTemplateJsonRequest: EmbeddedCloneTemplateJsonRequest): EmbeddedClonedTemplate
+```
+
+Generates a URL to embeds Clone template process into your application.
+
+
+### Parameters
+
+|Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **templateId** | **string**|  | |
+| **embeddedCloneTemplateJsonRequest** | [**EmbeddedCloneTemplateJsonRequest**](../docs/EmbeddedCloneTemplateJsonRequest.md)| The embedded clone template request body. | [optional] |
+
+### Return type
+
+[**EmbeddedClonedTemplate**](../docs/EmbeddedClonedTemplate.md)
 
 ### Authorization
 
@@ -197,8 +231,8 @@ Deletes a template.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **templateId** | **string**| The template id. | |
-| **onBehalfOf** | **string**| The on behalfof email address. | [optional] |
+| **templateId** | **string**|  | |
+| **onBehalfOf** | **string**|  | [optional] |
 
 ### Return type
 
@@ -262,9 +296,9 @@ Download the template.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **templateId** | **string**| Template Id. | |
-| **onBehalfOf** | **string**| The on behalfof email address. | [optional] |
-| **includeFormFieldValues** | **boolean**| Include form field data. | [optional] [default to false] |
+| **templateId** | **string**|  | |
+| **onBehalfOf** | **string**|  | [optional] |
+| **includeFormFieldValues** | **boolean**|  | [optional] [default to false] |
 
 ### Return type
 
@@ -296,7 +330,7 @@ Edit and updates an existing template.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **templateId** | **string**| The template id. | |
+| **templateId** | **string**|  | |
 | **editTemplateRequest** | [**EditTemplateRequest**](../docs/EditTemplateRequest.md)| The edit template request body. | |
 
 ### Return type
@@ -329,7 +363,7 @@ Generates a edit URL to embeds template edit process into your application.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **templateId** | **string**| The template id. | |
+| **templateId** | **string**|  | |
 | **embeddedTemplateEditRequest** | [**EmbeddedTemplateEditRequest**](../docs/EmbeddedTemplateEditRequest.md)| The embedded edit template request body. | [optional] |
 
 ### Return type
@@ -362,7 +396,7 @@ Get summary of the template.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **templateId** | **string**| Template Id. | |
+| **templateId** | **string**|  | |
 
 ### Return type
 
@@ -500,7 +534,7 @@ Send a document for signature using a Template.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **templateId** | **string**| The template id. | |
+| **templateId** | **string**|  | |
 | **sendForSignFromTemplateForm** | [**SendForSignFromTemplateForm**](../docs/SendForSignFromTemplateForm.md)| The send template details as JSON. | [optional] |
 
 ### Return type
@@ -533,7 +567,7 @@ Share a template with teams and manage permissions.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **templateId** | **string**| Template Id. | |
+| **templateId** | **string**|  | |
 | **templateShareRequest** | [**TemplateShareRequest**](../docs/TemplateShareRequest.md)| Permissions request. | |
 
 ### Return type

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 | `deliveryMode` | ```string``` |   |  |
 | `authenticationCode` | ```string``` |   |  |
 | `identityVerificationSettings` | [```IdentityVerificationSettings```](IdentityVerificationSettings.md) |   |  |
+| `kbaSettings` | [```KbaSettings```](KbaSettings.md) |   |  |
 | `signerOrder` | ```number``` |   |  |
 | `enableEmailOTP` | ```boolean``` |   |  |
 | `signerType` | ```string``` |   |  |

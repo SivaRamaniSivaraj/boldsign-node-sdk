@@ -14,6 +14,7 @@ import { RequestFile } from './models';
 import { AuthenticationSettings } from './authenticationSettings';
 import { EditFormField } from './editFormField';
 import { IdentityVerificationSettings } from './identityVerificationSettings';
+import { KbaSettings } from './kbaSettings';
 import { PhoneNumber } from './phoneNumber';
 import { RecipientNotificationSettings } from './recipientNotificationSettings';
 
@@ -28,6 +29,7 @@ export class EditDocumentSigner {
     'deliveryMode'?: EditDocumentSigner.DeliveryModeEnum;
     'authenticationCode'?: string | null;
     'identityVerificationSettings'?: IdentityVerificationSettings;
+    'kbaSettings'?: KbaSettings;
     'signerOrder'?: number | null;
     'enableEmailOTP'?: boolean | null;
     'signerType'?: EditDocumentSigner.SignerTypeEnum;
@@ -96,6 +98,11 @@ export class EditDocumentSigner {
             "name": "identityVerificationSettings",
             "baseName": "identityVerificationSettings",
             "type": "IdentityVerificationSettings"
+        },
+        {
+            "name": "kbaSettings",
+            "baseName": "kbaSettings",
+            "type": "KbaSettings"
         },
         {
             "name": "signerOrder",
@@ -189,7 +196,8 @@ export namespace EditDocumentSigner {
         EmailOtp = <any> 'EmailOTP',
         AccessCode = <any> 'AccessCode',
         Smsotp = <any> 'SMSOTP',
-        IdVerification = <any> 'IdVerification'
+        IdVerification = <any> 'IdVerification',
+        Kba = <any> 'KBA'
     }
     export enum DeliveryModeEnum {
         Email = <any> 'Email',

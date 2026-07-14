@@ -213,7 +213,7 @@ export class GroupContactsApi {
     /**
      * 
      * @summary Deletes a Group Contact.
-     * @param groupId The group contact id.
+     * @param groupId 
      * @param options
      */
     public async deleteGroupContact (groupId: string, options: optionsI = {headers: {}}) : Promise<returnTypeI> {
@@ -324,7 +324,7 @@ export class GroupContactsApi {
     /**
      * 
      * @summary Get Summary of the Group Contact.
-     * @param groupId Group Contact Id.
+     * @param groupId 
      * @param options
      */
     public async getGroupContact (groupId: string, options: optionsI = {headers: {}}) : Promise<GetGroupContactDetails> {
@@ -574,7 +574,7 @@ export class GroupContactsApi {
     /**
      * 
      * @summary Update the Group Contact.
-     * @param groupId The group contact ID.
+     * @param groupId 
      * @param updateGroupContact The group contact details.
      * @param options
      */

@@ -52,5 +52,6 @@ Name | Type | Description | Notes
 | `allowedSignatureTypes` | ```Array<string>``` |   |  |
 | `groupSignerSettings` | [```GroupSignerSettings```](GroupSignerSettings.md) |   |  |
 | `enableAllowSignEverywhere` | ```boolean``` |   |  |
+| `documentTimeZone` | ```string``` |   |  |
 
 [[Back to Model list]](../README.md#models) [[Back to API list]](../README.md#api-endpoints) [[Back to README]](../README.md)

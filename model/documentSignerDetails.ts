@@ -14,6 +14,7 @@ import { RequestFile } from './models';
 import { DocumentFormFields } from './documentFormFields';
 import { GroupSigner } from './groupSigner';
 import { IdVerificationDetails } from './idVerificationDetails';
+import { KbaDetails } from './kbaDetails';
 import { PhoneNumber } from './phoneNumber';
 import { RecipientNotificationSettings } from './recipientNotificationSettings';
 import { SignerAuthenticationSettings } from './signerAuthenticationSettings';
@@ -47,6 +48,7 @@ export class DocumentSignerDetails {
     'groupId'?: string | null;
     'phoneNumber'?: PhoneNumber;
     'idVerification'?: IdVerificationDetails;
+    'kba'?: KbaDetails;
     'recipientNotificationSettings'?: RecipientNotificationSettings;
     'authenticationRetryCount'?: number | null;
     'enableQes'?: boolean | null;
@@ -183,6 +185,11 @@ export class DocumentSignerDetails {
             "type": "IdVerificationDetails"
         },
         {
+            "name": "kba",
+            "baseName": "kba",
+            "type": "KbaDetails"
+        },
+        {
             "name": "recipientNotificationSettings",
             "baseName": "recipientNotificationSettings",
             "type": "RecipientNotificationSettings"
@@ -232,7 +239,8 @@ export namespace DocumentSignerDetails {
         EmailOtp = <any> 'EmailOTP',
         AccessCode = <any> 'AccessCode',
         Smsotp = <any> 'SMSOTP',
-        IdVerification = <any> 'IdVerification'
+        IdVerification = <any> 'IdVerification',
+        Kba = <any> 'KBA'
     }
     export enum SignerTypeEnum {
         Signer = <any> 'Signer',

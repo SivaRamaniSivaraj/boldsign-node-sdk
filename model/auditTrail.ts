@@ -196,6 +196,12 @@ export namespace AuditTrail {
         QesExpired = <any> 'QESExpired',
         QesWithdrawn = <any> 'QESWithdrawn',
         ResentForApproval = <any> 'ResentForApproval',
-        DocumentFieldMarkup = <any> 'DocumentFieldMarkup'
+        DocumentFieldMarkup = <any> 'DocumentFieldMarkup',
+        KbaInitiated = <any> 'KBAInitiated',
+        KbaCompleted = <any> 'KBACompleted',
+        KbaFailed = <any> 'KBAFailed',
+        KbaReset = <any> 'KBAReset',
+        KbaAdded = <any> 'KBAAdded',
+        KbaRemoved = <any> 'KBARemoved'
     }
 }

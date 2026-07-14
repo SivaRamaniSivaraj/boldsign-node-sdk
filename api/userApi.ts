@@ -205,7 +205,7 @@ export class UserApi {
     /**
      * 
      * @summary Change users to other team.
-     * @param userId user Id.
+     * @param userId 
      * @param changeTeamRequest Change team request.
      * @param options
      */
@@ -437,7 +437,7 @@ export class UserApi {
     /**
      * 
      * @summary Get summary of the user.
-     * @param userId User Id.
+     * @param userId 
      * @param options
      */
     public async getUser (userId: string, options: optionsI = {headers: {}}) : Promise<UserProperties> {

@@ -7,6 +7,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 | `id` | ```string``` |   |  |
+| `formFieldId` | ```string``` |   |  |
 | `fieldType` | ```string``` |   |  |
 | `type` | ```string``` |   |  |
 | `value` | ```string``` |   |  |

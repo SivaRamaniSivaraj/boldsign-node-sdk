@@ -226,7 +226,7 @@ export class SenderIdentitiesApi {
     /**
      * 
      * @summary Deletes sender identity.
-     * @param email The email address.
+     * @param email 
      * @param options
      */
     public async deleteSenderIdentities (email: string, options: optionsI = {headers: {}}) : Promise<returnTypeI> {
@@ -337,8 +337,8 @@ export class SenderIdentitiesApi {
     /**
      * 
      * @summary Gets sender identity by ID or email.
-     * @param id The sender identity id.
-     * @param email The sender identity email.
+     * @param id 
+     * @param email 
      * @param options
      */
     public async getSenderIdentityProperties (id?: string, email?: string, options: optionsI = {headers: {}}) : Promise<SenderIdentityViewModel> {
@@ -590,7 +590,7 @@ export class SenderIdentitiesApi {
     /**
      * 
      * @summary Rerequests denied sender identity.
-     * @param email The email address.
+     * @param email 
      * @param options
      */
     public async reRequestSenderIdentities (email: string, options: optionsI = {headers: {}}) : Promise<returnTypeI> {
@@ -701,7 +701,7 @@ export class SenderIdentitiesApi {
     /**
      * 
      * @summary Resends sender identity invitation.
-     * @param email The email address.
+     * @param email 
      * @param options
      */
     public async resendInvitationSenderIdentities (email: string, options: optionsI = {headers: {}}) : Promise<returnTypeI> {
@@ -812,7 +812,7 @@ export class SenderIdentitiesApi {
     /**
      * 
      * @summary Updates sender identity.
-     * @param email The email address.
+     * @param email 
      * @param editSenderIdentityRequest The create sender identity request.
      * @param options
      */

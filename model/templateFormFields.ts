@@ -21,6 +21,7 @@ import { Rectangle } from './rectangle';
 
 export class TemplateFormFields {
     'id'?: string | null;
+    'formFieldId'?: string | null;
     'fieldType'?: string | null;
     'type'?: string | null;
     'value'?: string | null;
@@ -70,6 +71,11 @@ export class TemplateFormFields {
         {
             "name": "id",
             "baseName": "id",
+            "type": "string"
+        },
+        {
+            "name": "formFieldId",
+            "baseName": "formFieldId",
             "type": "string"
         },
         {

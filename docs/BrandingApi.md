@@ -74,14 +74,14 @@ Create the brand.
 | **showBuiltInFormFields** | **boolean**|  | [optional] [default to true] |
 | **allowCustomFieldCreation** | **boolean**|  | [optional] [default to false] |
 | **showSharedCustomFields** | **boolean**|  | [optional] [default to false] |
-| **hideDecline** | **boolean**|  | [optional] |
-| **hideSave** | **boolean**|  | [optional] |
-| **documentExpirySettingsExpiryDateType** | **string**|  | [optional] |
-| **documentExpirySettingsExpiryValue** | **number**|  | [optional] |
-| **documentExpirySettingsEnableDefaultExpiryAlert** | **boolean**|  | [optional] |
-| **documentExpirySettingsEnableAutoReminder** | **boolean**|  | [optional] |
-| **documentExpirySettingsReminderDays** | **number**|  | [optional] |
-| **documentExpirySettingsReminderCount** | **number**|  | [optional] |
+| **hideDecline** | **boolean**| This option prevents signers to decline the document during the signing process. | [optional] |
+| **hideSave** | **boolean**| This option prevents signers to save their changes during the signing process and continue signing later. | [optional] |
+| **documentExpirySettingsExpiryDateType** | **string**| This property represents the type for the expiry date | [optional] |
+| **documentExpirySettingsExpiryValue** | **number**| This property is used to set the expiry value based on the expiry type | [optional] |
+| **documentExpirySettingsEnableDefaultExpiryAlert** | **boolean**| This property will send the expiry alert email before the day of expiry for the pending signers. | [optional] |
+| **documentExpirySettingsEnableAutoReminder** | **boolean**| When auto reminder is enabled, you can select how often to remind in terms of days and select the maximum number of reminders. | [optional] |
+| **documentExpirySettingsReminderDays** | **number**| Remind in terms of days. | [optional] |
+| **documentExpirySettingsReminderCount** | **number**| Number of reminder count. | [optional] |
 | **customDomainSettingsDomainName** | **string**|  | [optional] |
 | **customDomainSettingsFromName** | **string**|  | [optional] |
 | **signatureFrameSettingsEnableSignatureFrame** | **boolean**|  | [optional] [default to false] |
@@ -119,7 +119,7 @@ Delete the brand.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **brandId** | **string**| brand Id. | |
+| **brandId** | **string**|  | |
 
 ### Return type
 
@@ -151,7 +151,7 @@ Edit the brand.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **brandId** | **string**| The brand id. | |
+| **brandId** | **string**|  | |
 | **brandName** | **string**|  | [optional] |
 | **brandLogo** | **RequestFile****RequestFile**|  | [optional] |
 | **backgroundColor** | **string**|  | [optional] |
@@ -171,14 +171,14 @@ Edit the brand.
 | **showBuiltInFormFields** | **boolean**|  | [optional] [default to true] |
 | **allowCustomFieldCreation** | **boolean**|  | [optional] [default to false] |
 | **showSharedCustomFields** | **boolean**|  | [optional] [default to false] |
-| **hideDecline** | **boolean**|  | [optional] |
-| **hideSave** | **boolean**|  | [optional] |
-| **documentExpirySettingsExpiryDateType** | **string**|  | [optional] |
-| **documentExpirySettingsExpiryValue** | **number**|  | [optional] |
-| **documentExpirySettingsEnableDefaultExpiryAlert** | **boolean**|  | [optional] |
-| **documentExpirySettingsEnableAutoReminder** | **boolean**|  | [optional] |
-| **documentExpirySettingsReminderDays** | **number**|  | [optional] |
-| **documentExpirySettingsReminderCount** | **number**|  | [optional] |
+| **hideDecline** | **boolean**| This option prevents signers to decline the document during the signing process. | [optional] |
+| **hideSave** | **boolean**| This option prevents signers to save their changes during the signing process and continue signing later. | [optional] |
+| **documentExpirySettingsExpiryDateType** | **string**| This property represents the type for the expiry date | [optional] |
+| **documentExpirySettingsExpiryValue** | **number**| This property is used to set the expiry value based on the expiry type | [optional] |
+| **documentExpirySettingsEnableDefaultExpiryAlert** | **boolean**| This property will send the expiry alert email before the day of expiry for the pending signers. | [optional] |
+| **documentExpirySettingsEnableAutoReminder** | **boolean**| When auto reminder is enabled, you can select how often to remind in terms of days and select the maximum number of reminders. | [optional] |
+| **documentExpirySettingsReminderDays** | **number**| Remind in terms of days. | [optional] |
+| **documentExpirySettingsReminderCount** | **number**| Number of reminder count. | [optional] |
 | **customDomainSettingsDomainName** | **string**|  | [optional] |
 | **customDomainSettingsFromName** | **string**|  | [optional] |
 | **signatureFrameSettingsEnableSignatureFrame** | **boolean**|  | [optional] [default to false] |
@@ -216,7 +216,7 @@ Get the specific brand details.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **brandId** | **string**| The brand id. | |
+| **brandId** | **string**|  | |
 
 ### Return type
 
@@ -248,7 +248,7 @@ Reset default brand.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **brandId** | **string**| brand Id. | |
+| **brandId** | **string**|  | |
 
 ### Return type
 

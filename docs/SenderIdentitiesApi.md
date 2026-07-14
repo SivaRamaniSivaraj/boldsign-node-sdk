@@ -58,7 +58,7 @@ Deletes sender identity.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email** | **string**| The email address. | |
+| **email** | **string**|  | |
 
 ### Return type
 
@@ -90,8 +90,8 @@ Gets sender identity by ID or email.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| The sender identity id. | [optional] |
-| **email** | **string**| The sender identity email. | [optional] |
+| **id** | **string**|  | [optional] |
+| **email** | **string**|  | [optional] |
 
 ### Return type
 
@@ -158,7 +158,7 @@ Rerequests denied sender identity.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email** | **string**| The email address. | |
+| **email** | **string**|  | |
 
 ### Return type
 
@@ -190,7 +190,7 @@ Resends sender identity invitation.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email** | **string**| The email address. | |
+| **email** | **string**|  | |
 
 ### Return type
 
@@ -222,7 +222,7 @@ Updates sender identity.
 
 |Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **email** | **string**| The email address. | |
+| **email** | **string**|  | |
 | **editSenderIdentityRequest** | [**EditSenderIdentityRequest**](../docs/EditSenderIdentityRequest.md)| The create sender identity request. | |
 
 ### Return type

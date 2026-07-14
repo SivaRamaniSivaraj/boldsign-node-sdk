@@ -56,6 +56,7 @@ export class SendForSignFromTemplateForm {
     'allowedSignatureTypes'?: Array<SendForSignFromTemplateForm.AllowedSignatureTypesEnum>;
     'groupSignerSettings'?: GroupSignerSettings;
     'enableAllowSignEverywhere'?: boolean | null;
+    'documentTimeZone'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -239,6 +240,11 @@ export class SendForSignFromTemplateForm {
             "name": "enableAllowSignEverywhere",
             "baseName": "enableAllowSignEverywhere",
             "type": "boolean"
+        },
+        {
+            "name": "documentTimeZone",
+            "baseName": "documentTimeZone",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

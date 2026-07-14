@@ -31,6 +31,7 @@ Name | Type | Description | Notes
 | `groupId` | ```string``` |   |  |
 | `phoneNumber` | [```PhoneNumber```](PhoneNumber.md) |   |  |
 | `idVerification` | [```IdVerificationDetails```](IdVerificationDetails.md) |   |  |
+| `kba` | [```KbaDetails```](KbaDetails.md) |   |  |
 | `recipientNotificationSettings` | [```RecipientNotificationSettings```](RecipientNotificationSettings.md) |   |  |
 | `authenticationRetryCount` | ```number``` |   |  |
 | `enableQes` | ```boolean``` |   |  |

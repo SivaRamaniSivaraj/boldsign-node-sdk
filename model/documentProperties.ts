@@ -72,6 +72,7 @@ export class DocumentProperties {
     'enableAllowSignEverywhere'?: boolean;
     'isCombinedAudit'?: boolean;
     'isCombinedAttachment'?: boolean;
+    'documentTimeZone'?: string | null;
 
     static discriminator: string | undefined = undefined;
 
@@ -310,6 +311,11 @@ export class DocumentProperties {
             "name": "isCombinedAttachment",
             "baseName": "isCombinedAttachment",
             "type": "boolean"
+        },
+        {
+            "name": "documentTimeZone",
+            "baseName": "documentTimeZone",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
